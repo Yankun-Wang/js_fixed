@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        height: 10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    function upDate(previewPic){
+ /* In this function you should
+    1) change the url for the background image of the div with the id = "image"
+    to the source file of the preview image
+
+    2) Change the text  of the div with the id = "image"
+    to the alt text of the preview image
+    */
+    console.log(previewPic);
+    var psrc = previewPic.src;
+    console.log(psrc);
+
+    document.querySelector('#image').style.backgroundImage = "url(' "+ psrc + "')";
+    document.querySelector('#image').innerHTML = previewPic.alt;
+    }
+	function unDo(){
+     /* In this function you should
+    1) Update the url for the background image of the div with the id = "image"
+    back to the orginal-image.  You can use the css code to see what that original URL was
+
+    2) Change the text  of the div with the id = "image"
+    back to the original text.  You can use the html code to see what that original text was
+    */
+    document.querySelector('#image').style.background = "#8e68ff";
+    document.querySelector('#image').style.backgroundSize = "100%";
+	  document.querySelector('#image').innerHTML = "Hover or tab over/into an image below.";	
+	}
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"
+            alt = "Border Collie"
+            tabindex = "1"
+            src = "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()"
+            onfocus="upDate(this)";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"
+            alt = "Teddy Dog"
+            tabindex = "2"
+            src = "https://images.unsplash.com/photo-1505044197374-4d4ae3f9d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "3"
+            src = "https://images.unsplash.com/photo-1511029029301-60680e65f7c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+            alt = "Pug"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)";>
+        
+        <img class = "preview" tabindex = "4"
+        alt = "Samoyed"
+        src = "https://images.unsplash.com/photo-1529429617124-95b109e86bb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+        onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "5"
+            alt = "Golden Retriever"
+            src = "https://images.unsplash.com/photo-1504430225224-21a649ac91bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "6"
+            src = "https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+            alt = "Chow-Chow"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)";>
+</body>
+</html>
